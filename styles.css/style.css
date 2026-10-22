@@ -1,0 +1,255 @@
+/* Configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f4fa;
+    color: #263248;
+    min-height: 100vh;
+    padding: 35px 18px;
+}
+
+/* Contenedor principal */
+.contenedor {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(30, 48, 85, 0.10);
+}
+
+/* Encabezado */
+.encabezado {
+    background: linear-gradient(135deg, #263b70, #4666b0);
+    color: #ffffff;
+    text-align: center;
+    padding: 32px 22px;
+}
+
+.encabezado h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.encabezado p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #e5eaff;
+}
+
+/* Formulario */
+.formulario {
+    padding: 30px;
+}
+
+.seccion {
+    margin-bottom: 30px;
+}
+
+.seccion h2 {
+    font-size: 20px;
+    color: #263b70;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e8ecf5;
+}
+
+.descripcion {
+    font-size: 14px;
+    color: #69758a;
+    margin-top: -10px;
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+/* Filas de campos */
+.fila {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    margin-bottom: 18px;
+}
+
+.campo label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #34415a;
+}
+
+.campo input {
+    width: 100%;
+    min-width: 0;
+    height: 46px;
+    padding: 0 13px;
+    border: 1px solid #d6ddea;
+    border-radius: 8px;
+    background: #fbfcff;
+    color: #263248;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.campo input::placeholder {
+    color: #9aa4b5;
+}
+
+.campo input:focus {
+    border-color: #4666b0;
+    box-shadow: 0 0 0 3px rgba(70, 102, 176, 0.13);
+}
+
+.campo-completo {
+    width: 100%;
+}
+
+/* Carreras de interés */
+.opciones-carreras {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.opcion {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    min-width: 0;
+    min-height: 52px;
+    padding: 13px;
+    border: 1px solid #dce3f0;
+    border-radius: 9px;
+    background: #fbfcff;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.opcion:hover {
+    background: #f0f4ff;
+    border-color: #4666b0;
+}
+
+.opcion input {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    accent-color: #344f91;
+    cursor: pointer;
+}
+
+.opcion span {
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+/* Botón de registro */
+.btn-registrar {
+    display: block;
+    width: 100%;
+    min-height: 49px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 9px;
+    background: #304b88;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.btn-registrar:hover {
+    background: #223866;
+}
+
+.btn-registrar:active {
+    transform: scale(0.99);
+}
+
+.btn-registrar:focus-visible,
+.opcion input:focus-visible {
+    outline: 3px solid #91a9ec;
+    outline-offset: 3px;
+}
+
+/* Pie de página */
+.pie {
+    padding: 18px;
+    background: #f8f9fc;
+    color: #7b8598;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* Tabletas */
+@media (max-width: 768px) {
+    body {
+        padding: 24px 14px;
+    }
+    .contenedor {
+        max-width: 620px;
+    }
+    .formulario {
+        padding: 24px;
+    }
+    .encabezado h1 {
+        font-size: 25px;
+    }
+}
+
+/* Teléfonos */
+@media (max-width: 480px) {
+    body {
+        padding: 12px 8px;
+    }
+    .contenedor {
+        border-radius: 12px;
+    }
+    .encabezado {
+        padding: 25px 16px;
+    }
+    .encabezado h1 {
+        font-size: 22px;
+    }
+    .encabezado p {
+        font-size: 13px;
+    }
+    .formulario {
+        padding: 20px 15px;
+    }
+    .seccion h2 {
+        font-size: 18px;
+    }
+    .fila {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .opciones-carreras {
+        grid-template-columns: 1fr;
+    }
+    .campo input {
+        height: 46px;
+        font-size: 16px;
+    }
+    .opcion {
+        min-height: 50px;
+    }
+    .btn-registrar {
+        min-height: 48px;
+    }
+}

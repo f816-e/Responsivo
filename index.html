@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="styles.css/style.css">
+</head>
+<body>
+
+    <main class="contenedor">
+        <header class="encabezado">
+            <h1>Formulario de Registro</h1>
+            <p>Ingresa tus datos personales y académicos</p>
+        </header>
+
+        <form class="formulario">
+
+            <!-- Datos personales -->
+            <section class="seccion">
+                <h2>Datos personales</h2>
+
+                <div class="campo campo-completo">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre"
+                           placeholder="Escribe tu nombre completo">
+                </div>
+
+                <div class="fila">
+                    <div class="campo">
+                        <label for="edad">Edad</label>
+                        <input type="number" id="edad" name="edad"
+                               min="1" max="120" placeholder="Ej. 18">
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono"
+                               placeholder="Tu número telefónico">
+                    </div>
+                </div>
+
+                <div class="campo campo-completo">
+                    <label for="direccion">Dirección</label>
+                    <input type="text" id="direccion" name="direccion"
+                           placeholder="Calle, número y colonia">
+                </div>
+
+                <div class="fila">
+                    <div class="campo">
+                        <label for="localidad">Localidad</label>
+                        <input type="text" id="localidad" name="localidad"
+                               placeholder="Tu localidad">
+                    </div>
+
+                    <div class="campo">
+                        <label for="municipio">Municipio</label>
+                        <input type="text" id="municipio" name="municipio"
+                               placeholder="Tu municipio">
+                    </div>
+                </div>
+
+                <div class="campo campo-completo">
+                    <label for="estado">Estado</label>
+                    <input type="text" id="estado" name="estado"
+                           placeholder="Tu estado">
+                </div>
+            </section>
+
+            <!-- Carreras de interés -->
+            <section class="seccion">
+                <h2>Carreras de interés</h2>
+                <p class="descripcion">
+                    Selecciona una o varias opciones.
+                </p>
+
+                <div class="opciones-carreras">
+                    <label class="opcion">
+                        <input type="checkbox" name="carreras"
+                               value="Educación">
+                        <span>Educación</span>
+                    </label>
+
+                    <label class="opcion">
+                        <input type="checkbox" name="carreras"
+                               value="TI">
+                        <span>Tecnologías de la Información (TI)</span>
+                    </label>
+
+                    <label class="opcion">
+                        <input type="checkbox" name="carreras"
+                               value="Contaduría">
+                        <span>Contaduría</span>
+                    </label>
+                </div>
+            </section>
+
+            <!-- Redes sociales -->
+            <section class="seccion">
+                <h2>Redes sociales</h2>
+                <p class="descripcion">
+                    Agrega tus perfiles o datos de contacto.
+                </p>
+
+                <div class="campo campo-completo">
+                    <label for="facebook">Facebook</label>
+                    <input type="text" id="facebook" name="facebook"
+                           placeholder="Nombre de usuario o enlace">
+                </div>
+
+                <div class="campo campo-completo">
+                    <label for="instagram">Instagram</label>
+                    <input type="text" id="instagram" name="instagram"
+                           placeholder="@usuario o enlace">
+                </div>
+
+                <div class="campo campo-completo">
+                    <label for="whatsapp">WhatsApp</label>
+                    <input type="tel" id="whatsapp" name="whatsapp"
+                           placeholder="Número de WhatsApp">
+                </div>
+            </section>
+
+            <button type="submit" class="btn-registrar">
+                Registrar datos
+            </button>
+
+        </form>
+
+        <footer class="pie">
+            Formulario de registro. © Todos los derechos reservados ®.
+        </footer>
+    </main>
+
+</body>
+</html>
